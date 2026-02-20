@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circulating | Portfolio</title>
+    <meta
+      name="description"
+      content="A curated portfolio of presentations, documents, and articles."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#" class="brand">Circulating</a>
+        <a class="ghost-link" href="#portfolio">View portfolio</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container reveal">
+        <p class="eyebrow">Selected work archive</p>
+        <h1>Presenting ideas with clarity, structure, and measurable impact.</h1>
+        <p class="hero-copy">
+          A living catalog of decks, strategic documents, and published writing.
+          Browse by format, search by topic, and open each artifact directly.
+        </p>
+        <div class="hero-metrics">
+          <article>
+            <strong id="metric-total">0</strong>
+            <span>Total works</span>
+          </article>
+          <article>
+            <strong id="metric-presentations">0</strong>
+            <span>Presentations</span>
+          </article>
+          <article>
+            <strong id="metric-documents">0</strong>
+            <span>Documents</span>
+          </article>
+          <article>
+            <strong id="metric-articles">0</strong>
+            <span>Articles</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio container reveal">
+        <div class="section-head">
+          <h2>Portfolio</h2>
+          <p>Filter by work type or search by title, tags, and keywords.</p>
+        </div>
+
+        <div class="controls" role="region" aria-label="Portfolio controls">
+          <div class="filters" role="tablist" aria-label="Work type filter">
+            <button class="filter-chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter-chip" data-filter="presentation" role="tab" aria-selected="false">Presentations</button>
+            <button class="filter-chip" data-filter="document" role="tab" aria-selected="false">Documents</button>
+            <button class="filter-chip" data-filter="article" role="tab" aria-selected="false">Articles</button>
+          </div>
+          <label class="search-wrap" for="search">
+            <span class="sr-only">Search portfolio</span>
+            <input id="search" type="search" placeholder="Search by topic, tag, or title" />
+          </label>
+        </div>
+
+        <div id="results-meta" class="results-meta" aria-live="polite"></div>
+        <div id="portfolio-grid" class="portfolio-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <template id="card-template">
+      <article class="work-card reveal-stagger">
+        <div class="work-card-top">
+          <span class="work-type"></span>
+          <span class="work-year"></span>
+        </div>
+        <h3 class="work-title"></h3>
+        <p class="work-summary"></p>
+        <ul class="work-tags"></ul>
+        <a class="work-link" target="_blank" rel="noopener noreferrer">Open work</a>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
