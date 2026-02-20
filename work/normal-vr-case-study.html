@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Normal VR Case Study | Circulating</title>
+    <meta name="description" content="Interactive web presentation of the Normal VR case study." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="normal-vr-case-study.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="back" href="../index.html">Back to Portfolio</a>
+      <div class="title-wrap">
+        <p class="kicker">Case Study</p>
+        <h1>Normal VR</h1>
+      </div>
+      <a class="download" href="../assets/normal-vr-case-study.pdf" download>Download PDF</a>
+    </header>
+
+    <main class="layout">
+      <aside class="thumbs-panel" aria-label="Page thumbnails">
+        <h2>Slides</h2>
+        <div id="thumbs" class="thumbs"></div>
+      </aside>
+
+      <section class="viewer-panel">
+        <div class="controls" role="group" aria-label="Viewer controls">
+          <button id="prevBtn" type="button">Prev</button>
+          <button id="nextBtn" type="button">Next</button>
+          <button id="fitBtn" type="button">Fit Width</button>
+          <button id="zoomOutBtn" type="button">-</button>
+          <button id="zoomInBtn" type="button">+</button>
+          <p id="status" class="status" aria-live="polite">Loading...</p>
+        </div>
+
+        <div class="progress-wrap" aria-hidden="true">
+          <div id="progress" class="progress"></div>
+        </div>
+
+        <div id="canvasWrap" class="canvas-wrap">
+          <canvas id="slideCanvas"></canvas>
+        </div>
+
+        <p class="hint">Tip: Use left/right arrow keys to navigate slides.</p>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/pdf.min.mjs" type="module"></script>
+    <script src="normal-vr-case-study.js" type="module"></script>
+  </body>
+</html>

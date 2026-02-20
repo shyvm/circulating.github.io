@@ -181,3 +181,4 @@ searchInput.addEventListener("input", (event) => {
 
 syncMetrics();
 renderWorks();
+
